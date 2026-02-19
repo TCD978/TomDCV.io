@@ -1,0 +1,239 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  --bg: #0a0f14;
+  --text: #e8f1f2;
+  --accent: #00ff9d;
+  --accent-soft: rgba(0, 255, 157, 0.25);
+
+  --card-border: rgba(255, 255, 255, 0.12);
+
+  --radius: 14px;
+  --transition: 0.25s ease;
+  --shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+
+  /* PAGE BACKGROUND NOW USES SHAMROCK PATTERN */
+  background-image: url("shamrockbackground.PNG");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  background-position: center;
+
+  color: var(--text);
+  padding: 40px 20px;
+  line-height: 1.7;
+}
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+header img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  object-fit: cover;
+  margin-bottom: 18px;
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+}
+
+/* =========================
+   SOCIAL + QUICK LINKS
+========================= */
+.social-links,
+.quick-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.quick-links h2 {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.quick-links ul {
+  list-style: none;
+}
+
+.quick-links li {
+  margin: 6px 0;
+}
+
+/* =========================
+   CARD / BOX DESIGN
+   (Reversed background + gradient)
+========================= */
+.card,
+.box {
+  /* 45° GRADIENT: BLACK → DARK GREEN */
+  background: linear-gradient(
+    45deg,
+    #000000 0%,
+    #003b1f 100%
+  );
+
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow);
+
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover,
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px var(--accent-soft);
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+.card h2,
+.box h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+/* =========================
+   LISTS
+========================= */
+.card ul,
+.box ul {
+  margin-left: 22px;
+  margin-top: 12px;
+}
+
+.card li,
+.box li {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   TABLES
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+th {
+  color: var(--accent);
+  text-align: left;
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+}
+
+.neon-button {
+  padding: 14px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.neon-button:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  opacity: 0.8;
+}
